@@ -74,7 +74,6 @@ setTimeout(() => {
 
 
 
-// // import * as basicLightbox from 'basiclightbox';
 
 // const gallery = document.querySelector('.gallery');
 

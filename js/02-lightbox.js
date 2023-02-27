@@ -33,7 +33,7 @@ let gallery = new SimpleLightbox('.gallery .gallery__item', {
     captionsData: 'alt',
     captionPosition: 'bottom',
     captionDelay: 250,
-    animationSpeed: 550,
+    animationSpeed: 350,
     fadeSpeed: 450,
 
 });

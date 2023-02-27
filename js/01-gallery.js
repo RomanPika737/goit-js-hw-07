@@ -52,7 +52,7 @@ function onGalleryContainerClick(event) {
 
 setTimeout(() => {
   instance.close((instance) => {} )
-}, 5000);
+}, 10000);
   
   // instance.element().querySelector('img').src = event.target.dataset.source;
   // instance.show(); 
@@ -119,7 +119,7 @@ function onEscKeyPress(event) {
 
 // setTimeout(() => {
 //   instance.close((instance) => {} )
-// }, 5000);
+// }, 10000);
 
 
 // function onGalleryContainerClick(event) {

@@ -31,6 +31,7 @@ function createGalleryMarkup(galleryItems) {
 };
 
 let instance = 0;
+
 function onGalleryContainerClick(event) {
   event.preventDefault();
 
@@ -51,7 +52,7 @@ function onGalleryContainerClick(event) {
   instance.show((instance) => { window.addEventListener('keydown', onEscKeyPress)});
 
 setTimeout(() => {
-  instance.close((instance) => {} )
+  instance.close((instance) => {window.removeEventListener('keydown', onEscKeyPress)} )
 }, 10000);
   
   // instance.element().querySelector('img').src = event.target.dataset.source;
@@ -117,9 +118,9 @@ function onEscKeyPress(event) {
 
 // // instance.show((instance) => {} )
 
-// setTimeout(() => {
-//   instance.close((instance) => {} )
-// }, 10000);
+// // setTimeout(() => {
+// //   instance.close((instance) => {} )
+// // }, 10000);
 
 
 // function onGalleryContainerClick(event) {

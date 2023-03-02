@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-
+// import * as basicLightbox from 'basiclightbox'
 console.log(galleryItems);
 
 const galleryContainer = document.querySelector('.gallery');
@@ -42,18 +42,20 @@ function onGalleryContainerClick(event) {
   }
 
   instance = basicLightbox.create(`<img width="1024" height="720" src="${event.target.dataset.source}" alt="${event.target.alt}">`,
-    // {
+    {
     //   closable: true,
     //   onShow: (instance) => { window.addEventListener('keydown', onEscKeyPress)},
     //   onClose: (instance) => { window.removeEventListener('keydown', onEscKeyPress) },
-    // }
+    }
   );
 
-  instance.show((instance) => { window.addEventListener('keydown', onEscKeyPress)});
+  instance.show((instance) => { window.addEventListener('keydown', onEscKeyPress) },
+    // console.log("open")
+  );
 
-setTimeout(() => {
-  instance.close((instance) => {window.removeEventListener('keydown', onEscKeyPress)} )
-}, 10000);
+// setTimeout(() => {
+//   instance.close((instance) => {window.removeEventListener('keydown', onEscKeyPress)} )
+// }, 10000);
   
   // instance.element().querySelector('img').src = event.target.dataset.source;
   // instance.show(); 
@@ -64,7 +66,9 @@ function onEscKeyPress(event) {
   const isEscKey = event.code === ESC_KEY_CODE;
 
   if (isEscKey) {
-    instance.close( (instance) => { window.removeEventListener('keydown', onEscKeyPress) });
+    instance.close((instance) => { window.removeEventListener('keydown', onEscKeyPress) },
+      // console.log("close")
+    );
   }
 };
 

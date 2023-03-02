@@ -34,6 +34,6 @@ let gallery = new SimpleLightbox('.gallery .gallery__item', {
     captionPosition: 'bottom',
     captionDelay: 250,
     animationSpeed: 350,
-    fadeSpeed: 450,
-
+    fadeSpeed: 350,
+    enableKeyboard: true,
 });
